@@ -31,3 +31,54 @@ public class HelloWorld {
         }
     }
 }
+/* 2439 */
+import java.util.Scanner;
+public class HelloWorld {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int N = scanner.nextInt();
+        for(int i = 0; i < N; i++) {
+            for(int j = 1; j <= N - i - 1; j++) { // **j = 0이면 앞에 공백생김**
+            	System.out.print(" ");
+            }
+            for(int k = 0; k < i + 1; k++) {
+            	System.out.print("*");
+            }
+            System.out.println();
+        }
+ //       scanner.close();
+    }
+}
+/* 2440 */
+import java.util.Scanner;
+public class HelloWorld {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int N = scanner.nextInt();
+        for(int i = 0; i < N; i++) {
+            for(int k = 1; k < N - i + 1; k++) {
+            	System.out.print("*");
+            }
+            System.out.println();
+        }
+ //       scanner.close();
+    }
+}
+/* 2441 */
+import java.util.Scanner;
+public class HelloWorld {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int N = scanner.nextInt();
+        for(int i = 0; i < N; i++) {
+        	for(int j = 0; j <= i - 1; j++) { // **j = 0이면 앞에 공백생김**
+            	System.out.print(" ");
+            }
+        	for(int k = 1; k < N - i + 1; k++) {
+            	System.out.print("*");
+            }
+            System.out.println();
+        }
+ //       scanner.close();
+    }
+}
