@@ -20,7 +20,7 @@ public class Main {
         }
     }
 }
-/*10871: 코드를 더 간결하게 할 수 있는 방법은?*/
+/*10817: 코드를 더 간결하게 할 수 있는 방법은?*/
 package Main;
 import java.util.Scanner;
 
@@ -59,4 +59,57 @@ public class Main {
         }
     }
 }
+
+/*10871 println, print 잘보기*/
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+
+        int N = sc.nextInt();
+        int X = sc.nextInt();
+
+        int[] a = new int[N];
+        for(int i = 0; i < a.length; ++i){
+            a[i] = sc.nextInt();
+        }
+        sc.close();
+
+        for(int i= 0; i < a.length; ++i){
+            if(a[i] < X){
+                System.out.print(a[i] + " ");
+            }
+        }
+
+    }
+}
+
+/*1546 Arrays.sort의 사용: import java.util.Arrays;*/
+package Main;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+
+        int num = sc.nextInt();
+        float[] score = new float[num];
+        float sum = 0;
+        for(int i = 0; i <num; i++){
+            score[i] = sc.nextInt();
+        }
+        Arrays.sort(score);
+        for(int i = 0; i < num; i++){
+            score[i] = (score[i] / score[num - 1]);
+            sum += score[i];
+        }
+        float avr = (sum / num) * 100.0f;
+        System.out.println(avr);
+
+
+    }
+}
+
 
