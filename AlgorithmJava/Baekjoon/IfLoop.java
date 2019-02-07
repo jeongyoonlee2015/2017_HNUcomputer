@@ -60,7 +60,7 @@ public class Main {
     }
 }
 
-/*10871 println, print 잘보기*/
+/*10871 println, print 잘보기 -> \n의 차이?!!*/
 import java.util.Scanner;
 
 public class Main {
