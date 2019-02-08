@@ -113,3 +113,28 @@ public class Main {
 }
 
 
+/*1110번: 26부터 시작한다. 2+6 = 8이다. 새로운 수는 68이다. 6+8 = 14이다. 새로운 수는 84이다. 8+4 = 12이다. 새로운 수는 42이다. 4+2 = 6이다. 새로운 수는 26이다.
+위의 예는 4번만에 원래 수로 돌아올 수 있다. 따라서 26의 사이클의 길이는 4이다. ***사이클의 길이구하기*** */
+import java.util.Scanner;
+public class Main {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int num = sc.nextInt();
+     
+    int count = 1;
+    int check = num;
+    while(true){
+      int num1 = num / 10;
+      int num2 = num % 10;
+      int num3 = num1 + num2;
+      num = num2 * 10 + num3 % 10;
+       
+      if(num == check)
+        break;
+      else{
+        count++;
+      }
+    }
+    System.out.println(count);
+  }
+}
